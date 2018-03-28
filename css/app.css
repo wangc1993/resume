@@ -1,0 +1,250 @@
+/*
+* @Author: wc
+* @Date:   2017-12-27 10:49:57
+* @Last Modified time: 2017-12-29 11:20:17
+*/
+body {
+  background: #3acfff;
+}
+
+/* #page {
+  height: 24000px;
+} */
+
+/* loading部分 */
+/* 定义一个加载动画 */
+@keyframes loadingScale{
+    0%{
+        transform: scale(1);
+        background: #fff;
+    }
+    100%{
+        transform: scale(.3);
+        background: #c1c1c1;
+    }
+}
+
+.loading {
+  position: absolute;
+  background: #3ad0ff;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.loading-circle_list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.loading-circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+    animation: loadingScale linear 1.2s;
+    animation-iteration-count: infinite;//无限循环
+}
+
+.loading-circle-left{
+    animation-delay: 0;
+}
+
+.loading-circle-center{
+    animation-delay: 0.4s;
+}
+
+.loading-circle-right{
+    animation-delay: 0.8s;
+}
+
+/* 开头介绍 */
+.introduce{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    text-align: center;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    z-index: 10;
+}
+
+.introduce .intro-name{
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    border: 3px solid #333;
+}
+
+.introduce .intro-description{
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border: 3px solid #333;
+}
+
+.introduce .intro-start{
+    width: 130px;
+    height: 60px;
+    font-size: 24px;
+    border: 2px solid #333;
+    color: #333;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.introduce .intro-tip {
+  color: #f1f1f1;
+  font-size: 22px;
+  animation: shine .8s infinite;
+}
+
+/* content部分 */
+/* tip闪烁动画 */
+@keyframes shine {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* 背景层 */
+.layer-horizontal{
+    width: 20000px;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.layer-horizontal .cloud{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url(../images/cloud.png);
+}
+
+.layer-horizontal .background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../images/background.png);
+}
+
+.layer-horizontal .mountain {
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 100%;
+  height: 800px;
+  background: url(../images/mountain.png);
+  background-size: auto 800px;
+}
+
+.layer-horizontal .trees {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: url(../images/trees.png);
+  background-size: auto 300px;
+}
+
+/* 障碍物 */
+.layer-horizontal .block {
+  position: absolute;
+  bottom: 80px;
+  width: 300px;
+  height: 300px;
+  background: url(../images/pipe.png) no-repeat;
+  background-size: cover;
+}
+
+.layer-horizontal .block1 {
+  left: 2000px;
+
+}
+.layer-horizontal .block2 {
+  left: 4000px;
+  height: 160px;
+}
+
+/* 项目 */
+.layer-horizontal .project{
+  position: absolute;
+  top: 36%;
+  width: 600px;
+  height: 550px;
+  margin-top: -200px;
+  background: url(../images/project.png);
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.layer-horizontal .project-title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.layer-horizontal .project-img {
+  position: absolute;
+  width: 120px;
+  height: 210px;
+  background: #ddd;
+  border: 1px solid #dfdfdf;
+  left: 100px;
+  top: 120px;
+}
+
+.layer-horizontal .project-desc {
+  padding-left: 220px;
+}
+
+.layer-horizontal .project-1 {
+  left: 6000px;
+}
+
+
+.layer-horizontal .project-2 {
+  left: 8000px;
+}
+
+/* 人 */
+#people-container {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  left: 50px;
+  bottom: 70px;
+  overflow: hidden;
+}
+
+.people {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  left: 0;
+  top: 0;
+  background: url(../images/people.png) no-repeat;
+}
+

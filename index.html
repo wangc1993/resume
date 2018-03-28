@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>滚动简历</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+    <!-- 让滚动条可以滚动 -->
+    <div id="page"></div>
+    <!-- loading部分 -->
+    <div class="loading" id="loading">
+        <div class="loading-circle_list">
+            <div class="loading-circle loading-circle-left"></div>
+            <div class="loading-circle loading-circle-center"></div>
+            <div class="loading-circle loading-circle-right"></div>
+        </div>
+    </div>
+    <!-- 开头介绍 -->
+    <div class="introduce">
+        <p class="intro-name">
+            你好！我叫<b>王成</b>
+        </p>
+        <p class="intro-description">
+            我是一个对前端爱好者，同时也是贵公司求职者
+        </p>
+        <button class="intro-start" id="js-start-resume">Go</button>
+        <p class="intro-tip">点击上面按钮，开始观看简历</p>
+    </div>
+    <!-- content区域 -->
+    <div class="content">
+        <!-- 背景层 -->
+        <div class="layer-horizontal">
+            <div class="cloud"></div>
+            <div class="mountain"></div>
+            <div class="trees"></div>
+            <div class="background"></div>
+            <!-- 障碍物 -->
+            <div class="block block1"></div>
+            <div class="block block2"></div>
+            <!-- 项目 -->
+            <div class="project project-1">
+              <h2 class="project-title">项目经验1</h2>
+              <img class="project-img" src="./images/project-demo.png">
+              <div class="project-desc">
+                <h3>项目简介</h3>
+                <p>这是一个耗尽我全身精力瞎掰的一个项目，我还是写两句好了</p>
+                <h3>技术栈</h3>
+                <p>React + Redux + Webpack</p>
+              </div>
+            </div>
+            <div class="project project-2">
+              <h2 class="project-title">项目经验2</h2>
+              <img class="project-img" src="./images/project-demo.png">
+              <div class="project-desc">
+                <h3>项目简介</h3>
+                <p>这是一个兼容移动端的微金所首页,github地址：<b>https://wangc1993.github.io/wjs/</b></p>
+                <h3>技术栈</h3>
+                <p>Jquery + Bootstrap + Git</p>
+              </div>
+            </div>
+        </div>
+        <!-- 人物 -->
+        <div id="people-container">
+            <div class="people"></div>
+        </div>
+    </div>
+    <script src="js/wangcheng.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/resource.js"></script>
+    <script src="js/scense.js"></script>
+    <script src="js/people.js"></script>
+    <script src="js/resume.js"></script>
+</body>
+</html>
